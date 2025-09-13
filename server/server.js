@@ -20,7 +20,7 @@ const server = http.createServer(app);
 // init socket.io
 const io = socketModule.init(server);
 
-// ✅ Just call connectDB() (no need to pass URI manually)
+// Just call connectDB() (no need to pass URI manually)
 connectDB()
   .then(() => {
     server.listen(PORT, () => console.log(`Server listening on ${PORT}`));
@@ -28,3 +28,6 @@ connectDB()
   .catch((err) => {
     console.error('DB connection failed', err);
   });
+
+
+  // complete
